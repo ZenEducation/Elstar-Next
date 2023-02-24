@@ -3,9 +3,13 @@ import { AdaptableCard, Container } from "components/shared";
 import DemoCard from "components/docs/DemoCard";
 import DemoTitleSection from "components/docs/DemoTitleSection";
 import DemoComponentApi from "components/docs/DemoComponentApi";
-import Affix from "components/shared/Affix";
-
+// import Affix from "components/shared/Affix";
+import dynamic from "next/dynamic";
 import { Link } from "react-scroll";
+
+const Affix = dynamic(() => import("/components/shared/Affix"), {
+  ssr: false,
+});
 
 const DemoLayout = (props) => {
   const {
