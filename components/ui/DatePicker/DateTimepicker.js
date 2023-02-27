@@ -125,11 +125,9 @@ const DateTimepicker = forwardRef((props, ref) => {
         capitalize(dayjs(date).locale(finalLocale).format(dateFormat))
       );
     closePickerOnChange && closeDropdown();
-    try {
-      window.setTimeout(() => inputRef.current?.focus(), 0);
-    } catch (err) {
-      console.log(err);
-    }
+    useEffect(() => {
+      typeof window.setTimeout(() => inputRef.current?.focus(), 0);
+    }, []);
   };
 
   const handleClear = () => {
@@ -193,16 +191,14 @@ const DateTimepicker = forwardRef((props, ref) => {
   };
 
   const handleOk = () => {
-    try {
-      setInputState(
-        capitalize(dayjs(_value).locale(finalLocale).format(dateFormat))
-      );
+    setInputState(
+      capitalize(dayjs(_value).locale(finalLocale).format(dateFormat))
+    );
+    useEffect(() => {
       closeDropdown();
-      window.setTimeout(() => inputRef.current?.focus(), 0);
+      typeof window.setTimeout(() => inputRef.current?.focus(), 0);
       onChange?.(_value);
-    } catch (err) {
-      console.log(err);
-    }
+    }, []);
   };
 
   return (

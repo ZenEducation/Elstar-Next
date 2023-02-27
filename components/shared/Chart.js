@@ -7,6 +7,7 @@ import {
   apexAreaChartDefaultOption,
   apexDonutChartDefaultOption,
 } from "configs/chart.config";
+
 import { DIR_RTL } from "constants/theme.constant";
 
 const notDonut = ["line", "bar", "area"];

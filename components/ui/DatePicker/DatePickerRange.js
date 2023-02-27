@@ -1,4 +1,4 @@
-import React, { useState, useRef, forwardRef } from "react";
+import React, { useState, useRef, forwardRef, useEffect } from "react";
 import dayjs from "dayjs";
 import useControllableState from "../hooks/useControllableState";
 import useMergedRef from "../hooks/useMergeRef";
@@ -72,16 +72,14 @@ const DatePickerRange = forwardRef((props, ref) => {
   });
 
   const handleValueChange = (range) => {
-    setValue(range);
-    try {
+    useEffect(() => {
+      setValue(range);
       if (closePickerOnChange && validationRule(range)) {
         setDropdownOpened(false);
         onDropdownClose?.();
-        window.setTimeout(() => inputRef.current?.focus(), 0);
+        typeof window.setTimeout(() => inputRef.current?.focus(), 0);
       }
-    } catch (err) {
-      console.log("working");
-    }
+    }, []);
   };
 
   const valueValid = validationRule(_value);

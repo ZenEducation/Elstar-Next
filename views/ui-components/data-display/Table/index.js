@@ -17,7 +17,7 @@ import DragAndDrop from "./DragAndDrop";
 import Resizable from "./Resizable";
 // import VirtualizedRows from "./VirtualizedRows";
 // const VirtualizedRows = dynamic(import './VirtualizedRows')
-
+import dynamic from "next/dynamic";
 const VirtualizedRows = dynamic(() => import("./VirtualizedRows"), {
   ssr: false,
 });

@@ -101,7 +101,7 @@ const Select = React.forwardRef((props, ref) => {
     }
 
     if (state.isFocused) {
-      return shadaowBase + twColor[themeColor][primaryColorLevel];
+      // return shadaowBase + twColor[themeColor][primaryColorLevel];
     }
 
     return "none";
@@ -153,9 +153,9 @@ const Select = React.forwardRef((props, ref) => {
           neutral30:
             mode === "dark" ? twColor.gray["600"] : twColor.gray["300"],
           neutral80: twColor.gray["700"],
-          primary25: twColor[themeColor]["50"],
-          primary50: twColor[themeColor]["100"],
-          primary: twColor[themeColor][primaryColorLevel],
+          // primary25: twColor[themeColor]["50"],
+          // primary50: twColor[themeColor]["100"],
+          // primary: twColor[themeColor][primaryColorLevel],
         },
       })}
       themeColor={`${themeColor}-${primaryColorLevel}`}

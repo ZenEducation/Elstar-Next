@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-function Affix(props) {
+const Affix = (props) => {
   const { offset = 0, className, children } = props;
 
   const ref = React.createRef();
@@ -13,7 +13,7 @@ function Affix(props) {
   };
 
   const checkPosition = (distanceToBody, width) => {
-    const scrollTop = window.scrollY;
+    const scrollTop = typeof window.scrollY;
 
     if (distanceToBody - scrollTop < offset) {
       if (ref.current.style.position !== "fixed") {
@@ -37,7 +37,7 @@ function Affix(props) {
     }
 
     const distanceToBody =
-      window.scrollY + ref.current.getBoundingClientRect().top;
+      typeof window.scrollY + ref.current.getBoundingClientRect().top;
     const handleScroll = () => {
       if (!ref.current) {
         return;
@@ -48,9 +48,9 @@ function Affix(props) {
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    typeof window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      typeof window.removeEventListener("scroll", handleScroll);
     };
   });
 
@@ -59,7 +59,7 @@ function Affix(props) {
       {children}
     </div>
   );
-}
+};
 
 Affix.propTypes = {
   offset: PropTypes.number,

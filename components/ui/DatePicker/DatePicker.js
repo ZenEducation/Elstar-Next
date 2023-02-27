@@ -120,16 +120,14 @@ const DatePicker = forwardRef((props, ref) => {
   }, [themeLocale]);
 
   const handleValueChange = (date) => {
-    try {
-      setValue(date);
-      setInputState(
-        capitalize(dayjs(date).locale(finalLocale).format(dateFormat))
-      );
-      closePickerOnChange && closeDropdown();
-      window.setTimeout(() => inputRef.current?.focus(), 0);
-    } catch (err) {
-      console.log(err);
-    }
+    setValue(date);
+    setInputState(
+      capitalize(dayjs(date).locale(finalLocale).format(dateFormat))
+    );
+    closePickerOnChange && closeDropdown();
+    useEffect(() => {
+      typeof window.setTimeout(() => inputRef.current?.focus(), 0);
+    }, []);
   };
 
   const handleClear = () => {

@@ -18,8 +18,8 @@ const breakpoint = {
 
 const useResponsive = () => {
   const getAllSizes = (comparator = "smaller") => {
-    try {
-      const currentWindowWidth = window.innerWidth;
+    useEffect(() => {
+      const currentWindowWidth = typeof window.innerWidth;
       return Object.fromEntries(
         Object.entries(breakpoint).map(([key, value]) => [
           key,
@@ -28,22 +28,18 @@ const useResponsive = () => {
             : currentWindowWidth < value,
         ])
       );
-    } catch (err) {
-      console.log(err);
-    }
+    }, []);
   };
 
   const getResponsiveState = () => {
-    try {
-      const currentWindowWidth = window.innerWidth;
+    useEffect(() => {
+      const currentWindowWidth = typeof window.innerWidth;
       return {
         windowWidth: currentWindowWidth,
         larger: getAllSizes("larger"),
         smaller: getAllSizes("smaller"),
       };
-    } catch (err) {
-      console.log(err);
-    }
+    }, []);
   };
 
   const [responsive, setResponsive] = useState(getResponsiveState());
@@ -54,14 +50,9 @@ const useResponsive = () => {
   };
 
   useEffect(() => {
-    try {
-      window.addEventListener("resize", resizeHandler);
-      return () => window.removeEventListener("resize", resizeHandler);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    } catch (err) {
-      console.log(err);
-    }
-  }, [responsive.windowWidth]);
+    typeof window.addEventListener("resize", resizeHandler);
+    return () => typeof window.removeEventListener("resize", resizeHandler);
+  }, [responsive?.windowWidth]);
 
   return responsive;
 };

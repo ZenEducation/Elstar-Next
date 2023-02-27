@@ -11,7 +11,7 @@ import PasswordVisible from "./PasswordVisible";
 import Textarea from "./Textarea";
 import Invalid from "./Invalid";
 import ControlledInput from "./ControlledInput";
-
+import dynamic from "next/dynamic";
 const Affix = dynamic(() => import("./Affix"), {
   ssr: false,
 });

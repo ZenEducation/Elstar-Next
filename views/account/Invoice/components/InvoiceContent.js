@@ -3,7 +3,8 @@ import { Button } from "components/ui";
 import { Loading } from "components/shared";
 import Logo from "components/template/Logo";
 import ContentTable from "./ContentTable";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 import isEmpty from "lodash/isEmpty";
 import { apiGetAccountInvoiceData } from "services/AccountServices";
 import { HiLocationMarker, HiPhone } from "react-icons/hi";
@@ -14,7 +15,7 @@ import dayjs from "dayjs";
 const InvoiceContent = () => {
   const { textTheme } = useThemeClass();
 
-  const location = useLocation();
+  const location = useRouter();
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({});
