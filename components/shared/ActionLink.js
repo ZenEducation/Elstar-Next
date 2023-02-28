@@ -1,47 +1,50 @@
-import React from 'react'
-import classNames from 'classnames'
-import PropTypes from 'prop-types'
-import useThemeClass from 'utils/hooks/useThemeClass'
-import { Link } from 'react-router-dom'
+import React from "react";
+import classNames from "classnames";
+import PropTypes from "prop-types";
+import useThemeClass from "utils/hooks/useThemeClass";
+// import { Link } from 'react-router-dom'
 
+import dynamic from "next/dynamic";
+
+import Link from "next/link";
 const ActionLink = (props) => {
-    const {
-        children,
-        className,
-        themeColor = true,
-        to,
-        href = '',
-        ...rest
-    } = props
+  const {
+    children,
+    className,
+    themeColor = true,
+    to,
+    href = "",
+    ...rest
+  } = props;
 
-    const { textTheme } = useThemeClass()
+  const { textTheme } = useThemeClass();
 
-    const classNameProps = {
-        className: classNames(
-            themeColor && textTheme,
-            'hover:underline',
-            className
-        ),
-    }
+  const classNameProps = {
+    className: classNames(
+      themeColor && textTheme,
+      "hover:underline",
+      className
+    ),
+  };
 
-    return to ? (
-        <Link to={to} {...classNameProps} {...rest}>
-            {children}
-        </Link>
-    ) : (
-        <a href={href} {...classNameProps} {...rest}>
-            {children}
-        </a>
-    )
-}
+  return to ? (
+    <Link href={to} {...classNameProps} {...rest}>
+      {children}
+    </Link>
+  ) : (
+    <a href={href} {...classNameProps} {...rest}>
+      {children}
+    </a>
+  );
+};
 
 ActionLink.propTypes = {
-    themeColor: PropTypes.bool,
-    to: PropTypes.string,
-}
+  themeColor: PropTypes.bool,
+  to: PropTypes.string,
+};
 
 ActionLink.defaultProps = {
-    themeColor: true,
-}
+  themeColor: true,
+};
 
-export default ActionLink
+export default ActionLink;

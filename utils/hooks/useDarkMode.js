@@ -13,16 +13,12 @@ function useDarkMode() {
   const onModeChange = (mode) => dispatch(setMode(mode));
 
   useEffect(() => {
-    try {
-      if (window === undefined) {
-        return;
-      }
-      const root = window.document.documentElement;
-      root.classList.remove(isEnabled ? MODE_LIGHT : MODE_DARK);
-      root.classList.add(isEnabled ? MODE_DARK : MODE_LIGHT);
-    } catch (err) {
-      console.log(err);
+    if (typeof window === undefined) {
+      return;
     }
+    const root = window.document.documentElement;
+    root.classList.remove(isEnabled ? MODE_LIGHT : MODE_DARK);
+    root.classList.add(isEnabled ? MODE_DARK : MODE_LIGHT);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isEnabled]);
 

@@ -1,43 +1,38 @@
-import React from 'react'
-import { SyntaxHighlighter } from 'components/shared'
-import { NavLink } from 'react-router-dom'
-
+import React from "react";
+import { SyntaxHighlighter } from "components/shared";
+// import { NavLink } from "react-router-dom";
+import Link from "next/link";
 const RouteAndNav = () => {
-    return (
-        <>
-            <p>
-                As we mentioned in{' '}
-                <NavLink to="/docs/documentation/installation">
-                    Installation
-                </NavLink>
-                , we have provided a starter version with minimum core
-                components and functionality setup, we strongly recommend
-                developer use this version to build the app on top.
-            </p>
-            <p>
-                When you have opened the starter pack in your local environment,
-                you will be redirected to the login page, where you can use{' '}
-                <i>user: admin | password: 123Qwe</i> this credential to sign
-                in.
-            </p>
-            <i>
-                Note: the starter version enabled mock api by default, every api
-                calls will point to the mock server, if you wish to disable or
-                know more about the mock api, visit{' '}
-                <NavLink to="/docs/documentation/mock-api">Mock API</NavLink>{' '}
-                doc.
-            </i>
-            <div className="mt-10" id="defaultConfig">
-                <h5>Default configs</h5>
-                <p>
-                    Here are some default configurations for the starter
-                    version, you can change the config according to your needs.
-                </p>
-                <p className="mb-2">
-                    AppConfig -{' '}
-                    <NavLink to="/docs/documentation/app">Doc</NavLink>
-                </p>
-                <SyntaxHighlighter language="js">{`const appConfig = {
+  return (
+    <>
+      <p>
+        As we mentioned in{" "}
+        <Link href="/docs/documentation/installation">Installation</Link>, we
+        have provided a starter version with minimum core components and
+        functionality setup, we strongly recommend developer use this version to
+        build the app on top.
+      </p>
+      <p>
+        When you have opened the starter pack in your local environment, you
+        will be redirected to the login page, where you can use{" "}
+        <i>user: admin | password: 123Qwe</i> this credential to sign in.
+      </p>
+      <i>
+        Note: the starter version enabled mock api by default, every api calls
+        will point to the mock server, if you wish to disable or know more about
+        the mock api, visit{" "}
+        <Link href="/docs/documentation/mock-api">Mock API</Link> doc.
+      </i>
+      <div className="mt-10" id="defaultConfig">
+        <h5>Default configs</h5>
+        <p>
+          Here are some default configurations for the starter version, you can
+          change the config according to your needs.
+        </p>
+        <p className="mb-2">
+          AppConfig - <Link href="/docs/documentation/app">Doc</Link>
+        </p>
+        <SyntaxHighlighter language="js">{`const appConfig = {
     apiPrefix: '/api',
     authenticatedEntryPath: '/home',
     unAuthenticatedEntryPath: '/sign-in',
@@ -45,13 +40,11 @@ const RouteAndNav = () => {
     enableMock: true
 }
 `}</SyntaxHighlighter>
-                <p className="mb-2">
-                    ThemeConfig -{' '}
-                    <NavLink to="/docs/documentation/overall=theme-config">
-                        Doc
-                    </NavLink>
-                </p>
-                <SyntaxHighlighter language="js">{`export const themeConfig = {
+        <p className="mb-2">
+          ThemeConfig -{" "}
+          <Link href="/docs/documentation/overall=theme-config">Doc</Link>
+        </p>
+        <SyntaxHighlighter language="js">{`export const themeConfig = {
     themeColor: 'indigo',
     direction: THEME_ENUM.DIR_LTR,
     mode: THEME_ENUM.MODE_LIGHT,
@@ -67,33 +60,33 @@ const RouteAndNav = () => {
     },
 }
 `}</SyntaxHighlighter>
-                <p className="mb-2">
-                    RoutesConfig -{' '}
-                    <NavLink to="/docs/documentation/routing">Doc</NavLink>
-                </p>
-                <SyntaxHighlighter language="js">{`const publicRoutes = [
+        <p className="mb-2">
+          RoutesConfig -{" "}
+          <NavLink href="/docs/documentation/routing">Doc</NavLink>
+        </p>
+        <SyntaxHighlighter language="js">{`const publicRoutes = [
     {
         key: 'signIn',
         path: '/sign-in',
-        component: React.lazy(() => import('views/auth/SignIn')),
+        component: dynamic(async() =>await import('views/auth/SignIn')),
         authority: [],
     },
     {
         key: 'signUp',
         path: '/sign-up',
-        component: React.lazy(() => import('views/auth/SignUp')),
+        component: dynamic(async() =>await import('views/auth/SignUp')),
         authority: [],
     },
     {
         key: 'forgotPassword',
         path: '/forgot-password',
-        component: React.lazy(() => import('views/auth/ForgotPassword')),
+        component: dynamic(async() =>await import('views/auth/ForgotPassword')),
         authority: [],
     },
     {
         key: 'resetPassword',
         path: '/reset-password',
-        component: React.lazy(() => import('views/auth/ResetPassword')),
+        component: dynamic(async() =>await import('views/auth/ResetPassword')),
         authority: [],
     }
 ]
@@ -102,16 +95,15 @@ export const protectedRoutes = [
     {
         key: 'home',
         path: '/home',
-        component: React.lazy(() => import('views/Home')),
+        component: dynamic(async() =>await import('views/Home')),
         authority: [],
     },
 ]
 `}</SyntaxHighlighter>
-                <p className="mb-2">
-                    NavConfig -{' '}
-                    <NavLink to="/docs/documentation/routing">Doc</NavLink>
-                </p>
-                <SyntaxHighlighter language="js">{`const navigationConfig = [
+        <p className="mb-2">
+          NavConfig - <Link href="/docs/documentation/routing">Doc</Link>
+        </p>
+        <SyntaxHighlighter language="js">{`const navigationConfig = [
     {
         key: 'home',
 		path: '/home',
@@ -124,9 +116,9 @@ export const protectedRoutes = [
     },
 ]
 `}</SyntaxHighlighter>
-            </div>
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default RouteAndNav
+export default RouteAndNav;

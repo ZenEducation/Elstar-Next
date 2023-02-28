@@ -96,12 +96,10 @@ const Billing = () => {
   };
 
   const onRedirect = (url) => {
-    try {
-      let win = window.open(url, "_blank");
+    useEffect(() => {
+      let win = typeof window.open(url, "_blank");
       win.focus();
-    } catch (err) {
-      console.log(err);
-    }
+    }, []);
   };
 
   useEffect(() => {
