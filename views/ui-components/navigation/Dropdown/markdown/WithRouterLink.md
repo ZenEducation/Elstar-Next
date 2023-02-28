@@ -1,8 +1,9 @@
 ```jsx
 import React from 'react'
 import { Dropdown } from 'components/ui'
-import { Link } from 'react-router-dom'
-
+<!-- import { Link } from 'react-router-dom'
+ -->
+import Link from "next/link"
 const WithRouterLink = () => {
     return (
         <div>
@@ -10,23 +11,23 @@ const WithRouterLink = () => {
                 <Dropdown.Item>
                     <Link
                         className="menu-item-link"
-                        to="/ui-components/checkbox"
+                        href="/ui-components/checkbox"
                     >
                         Checkbox
                     </Link>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                    <Link className="menu-item-link" to="/ui-components/button">
+                    <Link className="menu-item-link" href="/ui-components/button">
                         Button
                     </Link>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                    <Link className="menu-item-link" to="/ui-components/alert">
+                    <Link className="menu-item-link" href="/ui-components/alert">
                         Alert
                     </Link>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                    <Link className="menu-item-link" to="/ui-components/dialog">
+                    <Link className="menu-item-link" href="/ui-components/dialog">
                         Dialog
                     </Link>
                 </Dropdown.Item>

@@ -14,6 +14,7 @@ import {
   ADD_FILES_TO_TICKET,
   CREATE_TICKET,
 } from "../constants";
+import dynamic from "next/dynamic";
 const Affix = dynamic(() => import("components/shared/Affix"), {
   ssr: false,
 });

@@ -9,15 +9,11 @@ function useDirection() {
   const updateDirection = (dir) => dispatch(setDirection(dir));
 
   useEffect(() => {
-    try {
-      if (window === undefined) {
-        return;
-      }
-      const root = window.document.documentElement;
-      root.setAttribute("dir", direction);
-    } catch (err) {
-      console.log(err);
+    if (typeof window === undefined) {
+      return;
     }
+    const root = window.document.documentElement;
+    root.setAttribute("dir", direction);
   }, [direction]);
 
   return [direction, updateDirection];

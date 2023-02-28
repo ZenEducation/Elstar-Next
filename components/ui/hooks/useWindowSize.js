@@ -6,19 +6,15 @@ export default function useWindowSize() {
     height: undefined,
   });
   useEffect(() => {
-    try {
-      function handleResize() {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }
-      window.addEventListener("resize", handleResize);
-      handleResize();
-      return () => window.removeEventListener("resize", handleResize);
-    } catch (err) {
-      console.log(err);
+    function handleResize() {
+      setWindowSize({
+        width: typeof window.innerWidth,
+        height: typeof window.innerHeight,
+      });
     }
+    typeof window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => typeof window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowSize;
