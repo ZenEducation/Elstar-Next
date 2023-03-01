@@ -39,7 +39,7 @@ const Holding = ({ data = [] }) => {
     <Card>
       <div className="flex justify-between items-center mb-4">
         <h4>Holdings</h4>
-        <Button size="sm" onClick={() => navigate.push("/app/crypto/wallets")}>
+        <Button size="sm" onClick={() => navigate.push("/Apps/crypto/wallets")}>
           View All
         </Button>
       </div>

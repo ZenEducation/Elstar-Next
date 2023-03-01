@@ -1,12 +1,12 @@
 ```jsx
-import React from 'react'
-import { ActionLink } from 'components/shared'
+import React from "react";
+import { ActionLink } from "components/shared";
 
 const Basic = () => {
-    return (
-        <ActionLink to="/docs/documentation/introduction">Navigate</ActionLink>
-    )
-}
+  return (
+    <ActionLink to="/guide/documentationintroduction">Navigate</ActionLink>
+  );
+};
 
-export default Basic
+export default Basic;
 ```

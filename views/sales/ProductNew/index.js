@@ -30,12 +30,12 @@ const ProductNew = () => {
           placement: "top-center",
         }
       );
-      navigate.push("/app/sales/product-list");
+      navigate.push("/Apps/sales/product-list");
     }
   };
 
   const handleDiscard = () => {
-    navigate.push("/app/sales/product-list");
+    navigate.push("/Apps/sales/product-list");
   };
 
   return (

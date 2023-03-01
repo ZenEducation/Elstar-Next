@@ -1,0 +1,23 @@
+import React from "react";
+// import ProjectDashboard from "@/views/project/ProjectDashboard/index";
+import dynamic from "next/dynamic";
+
+const ProjectDashboard = dynamic(
+  () => import("views/project/ProjectDashboard/index"),
+  {
+    ssr: false,
+  }
+);
+import useLayout from "utils/hooks/useLayout";
+const dashboard = () => {
+  const Layout = useLayout();
+  return (
+    <>
+      <Layout>
+        <ProjectDashboard />
+      </Layout>
+    </>
+  );
+};
+
+export default dashboard;

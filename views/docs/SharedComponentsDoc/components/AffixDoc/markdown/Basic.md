@@ -2,6 +2,7 @@
 import React from "react";
 // import { Affix } from 'components/shared'
 import { Button } from "components/ui";
+import dynamic from "next/dynamic";
 const Affix = dynamic(() => import("components/shared"), {
   ssr: false,
 });

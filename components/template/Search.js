@@ -17,21 +17,21 @@ const recommendedSearch = [
     data: [
       {
         title: "Documentation",
-        url: "/docs/documentation/introduction",
+        url: "/guide/documentationintroduction",
         icon: "documentation",
         category: "Docs",
         categoryTitle: "Docs",
       },
       {
         title: "Changelog",
-        url: "/docs/changelog",
+        url: "/doc/changelog",
         icon: "changeLog",
         category: "Docs",
         categoryTitle: "Docs",
       },
       {
         title: "Button",
-        url: "/ui-components/button",
+        url: "/ui-components/common/button",
         icon: "common",
         category: "Common",
         categoryTitle: "UI Components",

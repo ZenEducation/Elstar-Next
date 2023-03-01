@@ -49,7 +49,7 @@ const MailSideBarContent = () => {
   const onMenuClick = (category) => {
     dispatch(updateMailId(""));
     dispatch(updateSelectedCategory(getCategory(category.value)));
-    navigate.push(`/app/crm/mail/${category.value}`, { replace: true });
+    navigate.push(`/Apps/crm/mail/${category.value}`, { replace: true });
   };
 
   useEffect(() => {

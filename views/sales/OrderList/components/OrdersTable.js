@@ -68,7 +68,7 @@ const OrderColumn = ({ row }) => {
   const navigate = useRouter();
 
   const onView = useCallback(() => {
-    navigate.push(`/app/sales/order-details/${row.id}`);
+    navigate.push(`/Apps/sales/order-details/${row.id}`);
   }, [navigate, row]);
 
   return (
@@ -92,7 +92,7 @@ const ActionColumn = ({ row }) => {
   };
 
   const onView = useCallback(() => {
-    navigate.push(`/app/sales/order-details/${row.id}`);
+    navigate.push(`/Apps/sales/order-details/${row.id}`);
   }, [navigate, row]);
 
   return (

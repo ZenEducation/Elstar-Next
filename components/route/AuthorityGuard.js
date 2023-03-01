@@ -10,7 +10,7 @@ const AuthorityGuard = (props) => {
 
   const roleMatched = useAuthority(userAuthority, authority);
 
-  return roleMatched ? children : navigate.push("/access-denied");
+  return roleMatched ? children : navigate.push("pages/pages/access-denied");
 };
 
 export default AuthorityGuard;

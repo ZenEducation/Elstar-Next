@@ -13,7 +13,7 @@ const MarketValue = ({ data = [], className }) => {
   const navigate = useRouter();
 
   const handleClick = () => {
-    navigate.push("/app/crypto/market");
+    navigate.push("/Apps/crypto/market");
   };
 
   const columns = useMemo(

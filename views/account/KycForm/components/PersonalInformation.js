@@ -5,10 +5,9 @@ import {
   Select,
   FormItem,
   FormContainer,
+  DatePicker,
 } from "components/ui";
-const DatePicker = dynamic(() => import("components/ui"), {
-  ssr: false,
-});
+import React from "react";
 import { Field, Form, Formik } from "formik";
 import NumberFormat from "react-number-format";
 import { countryList } from "constants/countries.constant";

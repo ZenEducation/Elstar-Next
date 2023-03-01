@@ -46,7 +46,7 @@ const MyTasks = ({ data = [] }) => {
             <ActionLink
               themeColor={false}
               className="font-semibold"
-              to="/app/project/scrum-board"
+              to="/Apps/project/scrum-board"
             >
               {taskId}
             </ActionLink>
@@ -81,7 +81,7 @@ const MyTasks = ({ data = [] }) => {
     useTable({ columns, data, initialState: { pageIndex: 0 } });
 
   const onViewAllTask = () => {
-    navigate.push("/app/project/issue");
+    navigate.push("/Apps/project/issue");
   };
 
   return (

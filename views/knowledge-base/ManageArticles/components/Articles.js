@@ -36,13 +36,13 @@ const CategorySection = ({ data }) => {
 
   const onArticleEdit = (id) => {
     navigate.push(
-      `/app/knowledge-base/edit-article?id=${id}&categoryLabel=${data.label}&categoryValue=${data.value}`
+      `/Apps/knowledge-base/edit-article?id=${id}&categoryLabel=${data.label}&categoryValue=${data.value}`
     );
   };
 
   const onArticleAdd = () => {
     navigate.push(
-      `/app/knowledge-base/edit-article?categoryLabel=${data.label}&categoryValue=${data.value}`
+      `/Apps/knowledge-base/edit-article?categoryLabel=${data.label}&categoryValue=${data.value}`
     );
   };
 

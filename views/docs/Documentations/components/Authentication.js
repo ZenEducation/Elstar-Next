@@ -1,84 +1,78 @@
-import React from 'react'
-import { SyntaxHighlighter } from 'components/shared'
-import DemoComponentApi from 'components/docs/DemoComponentApi'
+import React from "react";
+import { SyntaxHighlighter } from "components/shared";
+import DemoComponentApi from "components/docs/DemoComponentApi";
 
 function range(start, end) {
-    return Array(end - start + 1)
-        .fill()
-        .map((_, idx) => start + idx)
+  return Array(end - start + 1)
+    .fill()
+    .map((_, idx) => start + idx);
 }
 
 const Authentication = () => {
-    return (
-        <>
-            <p>
-                Elstar provides an implementation for JWT authorization that
-                allows you to quickly link up your backend services.
-            </p>
-            <p>
-                We are using <code>localStorage</code> & Redux to store
-                authentication info. As we mentioned in our{' '}
-                <strong>Redux guide</strong>, we use{' '}
-                <a
-                    href="https://github.com/rt2zz/redux-persist"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    redux-persist
-                </a>{' '}
-                to maintain localStorage synchronize with some of our Redux
-                state.
-            </p>
-            <div className="mt-10" id="useAuth">
-                <h5>useAuth hook</h5>
-                <p>
-                    We have created a hook that returns all the necessary method
-                    you might need to authenticate a user like{' '}
-                    <strong>signIn</strong>, <strong>signOut</strong>,{' '}
-                    <strong>signUp</strong> etc
-                </p>
-            </div>
-            <DemoComponentApi
-                hideApiTitle
-                keyText="properties"
-                api={[
-                    {
-                        api: [
-                            {
-                                propName: 'authenticated',
-                                type: `<code>boolean</code>`,
-                                default: `-`,
-                                desc: 'A state that define user whether authenticated, it will be true when token state has value & signedIn state is true in redux.',
-                            },
-                            {
-                                propName: 'signIn',
-                                type: `<code>(values: {userName: string, password: string}) => {status: 'success' | 'failed', message: string}</code>`,
-                                default: `-`,
-                                desc: `Function to sign in user.`,
-                            },
-                            {
-                                propName: 'signUp',
-                                type: `<code>(values: {userName: string, email: string, password: string}) => {status: 'success' | 'failed', message: string}</code>`,
-                                default: `-`,
-                                desc: `Function to sign up user.`,
-                            },
-                            {
-                                propName: 'signOut',
-                                type: `<code>() => void</code>`,
-                                default: `-`,
-                                desc: `Function to sign out user.`,
-                            },
-                        ],
-                    },
-                ]}
-            />
+  return (
+    <>
+      <p>
+        Elstar provides an implementation for JWT authorization that allows you
+        to quickly link up your backend services.
+      </p>
+      <p>
+        We are using <code>localStorage</code> & Redux to store authentication
+        info. As we mentioned in our <strong>Redux guide</strong>, we use{" "}
+        <a
+          href="https://github.com/rt2zz/redux-persist"
+          target="_blank"
+          rel="noreferrer"
+        >
+          redux-persist
+        </a>{" "}
+        to maintain localStorage synchronize with some of our Redux state.
+      </p>
+      <div className="mt-10" id="useAuth">
+        <h5>useAuth hook</h5>
+        <p>
+          We have created a hook that returns all the necessary method you might
+          need to authenticate a user like <strong>signIn</strong>,{" "}
+          <strong>signOut</strong>, <strong>signUp</strong> etc
+        </p>
+      </div>
+      <DemoComponentApi
+        hideApiTitle
+        keyText="properties"
+        api={[
+          {
+            api: [
+              {
+                propName: "authenticated",
+                type: `<code>boolean</code>`,
+                default: `-`,
+                desc: "A state that define user whether authenticated, it will be true when token state has value & signedIn state is true in redux.",
+              },
+              {
+                propName: "signIn",
+                type: `<code>(values: {userName: string, password: string}) => {status: 'success' | 'failed', message: string}</code>`,
+                default: `-`,
+                desc: `Function to sign in user.`,
+              },
+              {
+                propName: "signUp",
+                type: `<code>(values: {userName: string, email: string, password: string}) => {status: 'success' | 'failed', message: string}</code>`,
+                default: `-`,
+                desc: `Function to sign up user.`,
+              },
+              {
+                propName: "signOut",
+                type: `<code>() => void</code>`,
+                default: `-`,
+                desc: `Function to sign out user.`,
+              },
+            ],
+          },
+        ]}
+      />
 
-            <p>
-                Let's take a look at the signIn logic implementation in the
-                useAuth
-            </p>
+      <p>Let's take a look at the signIn logic implementation in the useAuth</p>
 
-            <SyntaxHighlighter language="js">{`import { apiSignIn, apiSignOut } from 'services/AuthService'
+      <SyntaxHighlighter language="js">{`import { apiSignIn, apiSignOut } from 'services/AuthService'
 ...
 const signIn = async (values) => {
 	try {
@@ -118,14 +112,14 @@ const signIn = async (values) => {
 	}
 }`}</SyntaxHighlighter>
 
-            <div className="mt-10" id="useAuth">
-                <h5>AuthService</h5>
-                <p>
-                    We also created a series of default authentication services
-                    under <code>src/services/AuthService.js</code>, each service
-                    method works coresponded <code>useAuth</code> fuction.
-                </p>
-                <SyntaxHighlighter language="js">{`import ApiService from "./ApiService"
+      <div className="mt-10" id="useAuth">
+        <h5>AuthService</h5>
+        <p>
+          We also created a series of default authentication services under{" "}
+          <code>src/services/AuthService.js</code>, each service method works
+          coresponded <code>useAuth</code> fuction.
+        </p>
+        <SyntaxHighlighter language="js">{`import ApiService from "./ApiService"
 
 export async function apiSignIn (data) {
     return ApiService.fetchData({
@@ -152,12 +146,9 @@ export async function apiSignOut (data) {
 }
 
 ...`}</SyntaxHighlighter>
-            </div>
-            <p>
-                Here is an example for sign in implementation using useAuth
-                hook:
-            </p>
-            <SyntaxHighlighter language="js">{`import React from 'react'
+      </div>
+      <p>Here is an example for sign in implementation using useAuth hook:</p>
+      <SyntaxHighlighter language="js">{`import React from 'react'
 import { Input, Button, Checkbox, FormItem, FormContainer, Alert } from 'components/ui'
 import { PasswordInput, ActionLink } from 'components/shared'
 import useTimeOutMessage from 'utils/hooks/useTimeOutMessage'
@@ -194,32 +185,29 @@ const SignInForm = props => {
 		...
 	)
 `}</SyntaxHighlighter>
-            <div className="mt-10" id="overview">
-                <h5>Remove default authenticate implementation</h5>
-                <p>
-                    If you feel the default Authenticate implementation
-                    incompatible with your case, you can remove the code as
-                    following
-                </p>
-            </div>
-            <div className="mt-10" id="overview">
-                <span>useAuth.js</span>
-                <SyntaxHighlighter
-                    language="js"
-                    wrapLines={true}
-                    showLineNumbers={true}
-                    lineProps={(lineNumber) => {
-                        let style = { display: 'block' }
-                        if (range(21, 27).includes(lineNumber)) {
-                            style.backgroundColor = '#00ff002e'
-                        } else if (
-                            [...range(28, 53), ...[63]].includes(lineNumber)
-                        ) {
-                            style.backgroundColor = '#ff00001f'
-                        }
-                        return { style }
-                    }}
-                >{`import { useSelector, useDispatch } from 'react-redux'
+      <div className="mt-10" id="overview">
+        <h5>Remove default authenticate implementation</h5>
+        <p>
+          If you feel the default Authenticate implementation incompatible with
+          your case, you can remove the code as following
+        </p>
+      </div>
+      <div className="mt-10" id="overview">
+        <span>useAuth.js</span>
+        <SyntaxHighlighter
+          language="js"
+          wrapLines={true}
+          showLineNumbers={true}
+          lineProps={(lineNumber) => {
+            let style = { display: "block" };
+            if (range(21, 27).includes(lineNumber)) {
+              style.backgroundColor = "#00ff002e";
+            } else if ([...range(28, 53), ...[63]].includes(lineNumber)) {
+              style.backgroundColor = "#ff00001f";
+            }
+            return { style };
+          }}
+        >{`import { useSelector, useDispatch } from 'react-redux'
 import { setUser, initialState } from 'store/auth/userSlice'
 import { apiSignIn, apiSignOut } from 'services/AuthService'
 import { onSignInSuccess, onSignOutSuccess } from 'store/auth/sessionSlice'
@@ -293,9 +281,9 @@ function useAuth() {
 }
 
 export default useAuth`}</SyntaxHighlighter>
-            </div>
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default Authentication
+export default Authentication;

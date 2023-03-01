@@ -12,17 +12,17 @@ import { FiActivity } from "react-icons/fi";
 const dropdownItemList = [
   {
     label: "Profile",
-    path: "/app/account/settings/profile",
+    path: "/Apps/account/settings/profile",
     icon: <HiOutlineUser />,
   },
   {
     label: "Account Setting",
-    path: "/app/account/settings/profile",
+    path: "/Apps/account/settings/profile",
     icon: <HiOutlineCog />,
   },
   {
     label: "Activity Log",
-    path: "/app/account/activity-log",
+    path: "/Apps/account/activity-log",
     icon: <FiActivity />,
   },
 ];

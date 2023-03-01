@@ -17,7 +17,7 @@ export default function App() {
       router.push("/sign-in");
     }
     if (authenticated) {
-      router.push("/app/sales/dashboard");
+      router.push("/Apps/sales/dashboard");
     }
   }, []);
   return <> </>;

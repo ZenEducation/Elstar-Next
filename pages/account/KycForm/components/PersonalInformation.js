@@ -6,6 +6,7 @@ import {
   FormItem,
   FormContainer,
 } from "components/ui";
+import dynamic from "next/dynamic";
 const DatePicker = dynamic(() => import("components/ui"), {
   ssr: false,
 });

@@ -8,7 +8,7 @@ const RecentActivities = (props) => {
   const navigate = useRouter();
 
   const handleClick = () => {
-    navigate.push("/app/crypto/wallets");
+    navigate.push("/Apps/crypto/wallets");
   };
 
   return (

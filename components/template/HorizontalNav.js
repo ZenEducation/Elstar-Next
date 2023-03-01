@@ -1,24 +1,17 @@
-import React from 'react'
-import HorizontalMenuContent from './HorizontalMenuContent'
-import useResponsive from 'utils/hooks/useResponsive'
-import { useSelector } from 'react-redux'
+import React from "react";
+import HorizontalMenuContent from "./HorizontalMenuContent";
+import useResponsive from "utils/hooks/useResponsive";
+import { useSelector } from "react-redux";
 
 const HorizontalNav = () => {
-    const mode = useSelector((state) => state.theme.mode)
-    const userAuthority = useSelector((state) => state.auth.user.authority)
+  const mode = useSelector((state) => state.theme.mode);
+  const userAuthority = useSelector((state) => state.auth.user.authority);
 
-    const { larger } = useResponsive()
+  return (
+    <>
+      <HorizontalMenuContent manuVariant={mode} userAuthority={userAuthority} />
+    </>
+  );
+};
 
-    return (
-        <>
-            {larger.md && (
-                <HorizontalMenuContent
-                    manuVariant={mode}
-                    userAuthority={userAuthority}
-                />
-            )}
-        </>
-    )
-}
-
-export default HorizontalNav
+export default HorizontalNav;

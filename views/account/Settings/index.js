@@ -39,7 +39,7 @@ const Settings = () => {
 
   const onTabChange = (val) => {
     setCurrentTab(val);
-    navigate.push(`/app/account/settings/${val}`);
+    navigate.push(`/Apps/account/settings/${val}`);
   };
 
   const fetchData = async () => {

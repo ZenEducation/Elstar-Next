@@ -60,7 +60,7 @@ const Editor = ({ mode }) => {
         <Notification title={`Successfully ${mode} article`} type="success" />,
         { placement: "top-center" }
       );
-      navigate.push("/app/knowledge-base/manage-articles");
+      navigate.push("/Apps/knowledge-base/manage-articles");
     }
   };
 

@@ -11,7 +11,7 @@ const pagesRoute = [
   },
   {
     key: "pages.accessDenied",
-    path: "/access-denied",
+    path: "/pages/access-denied",
     component: dynamic(() => import("views/pages/AccessDenied")),
     authority: [ADMIN, USER],
   },
