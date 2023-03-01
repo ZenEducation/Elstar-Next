@@ -129,7 +129,7 @@ const authNavigationConfig = [
           },
           {
             key: "authentication.forgotPasswordCover",
-            path: `${AUTH_PREFIX_PATH}/forgot-password-cover`,
+            path: `${AUTH_PREFIX_PATH}/ForgotPassword/forgot-password-cover`,
             title: "Cover",
             translateKey: "nav.authentication.forgotPasswordCover",
             icon: "",
