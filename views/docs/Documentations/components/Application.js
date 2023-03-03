@@ -17,7 +17,7 @@ const metadata = {
     {
       propName: "authenticatedEntryPath",
       type: `<code>string</code>`,
-      defaultDemo: `<code>'/app/sales/dashboard'</code>`,
+      defaultDemo: `<code>'/Apps/sales/dashboard'</code>`,
       defaultStarter: `<code>'/home'</code>`,
       desc: "URL that will redirect after authenticated",
     },
@@ -31,7 +31,7 @@ const metadata = {
     {
       propName: "tourPath",
       type: `<code>string</code>`,
-      defaultDemo: `<code>'/app/account/kyc-form'</code>`,
+      defaultDemo: `<code>'/Apps/account/kyc-form'</code>`,
       defaultStarter: `<code>'/'</code>`,
       desc: "URL that will redirect after signup,",
     },
@@ -65,9 +65,9 @@ const Application = () => {
       </span>
       <SyntaxHighlighter language="js">{`const appConfig = {
     apiPrefix: '/api',
-    authenticatedEntryPath: '/app/sales/dashboard',
+    authenticatedEntryPath: '/Apps/sales/dashboard',
     unAuthenticatedEntryPath: '/sign-in',
-    tourPath: '/app/account/kyc-form',
+    tourPath: '/Apps/account/kyc-form',
     locale: 'en',
     enableMock: true
 }`}</SyntaxHighlighter>

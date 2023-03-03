@@ -32,14 +32,14 @@ const useResponsive = () => {
   };
 
   const getResponsiveState = () => {
-    useEffect(() => {
-      const currentWindowWidth = typeof window.innerWidth;
-      return {
-        windowWidth: currentWindowWidth,
-        larger: getAllSizes("larger"),
-        smaller: getAllSizes("smaller"),
-      };
-    }, []);
+    // useEffect(() => {
+    const currentWindowWidth = typeof window.innerWidth;
+    return {
+      windowWidth: currentWindowWidth,
+      larger: getAllSizes("larger"),
+      smaller: getAllSizes("smaller"),
+    };
+    // }, []);
   };
 
   const [responsive, setResponsive] = useState(getResponsiveState());

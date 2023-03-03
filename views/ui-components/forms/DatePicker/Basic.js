@@ -1,8 +1,8 @@
-import React from 'react'
-import { DatePicker } from 'components/ui'
+import React from "react";
+import { DatePicker } from "components/ui";
 
 const Basic = () => {
-    return <DatePicker placeholder="Pick a date" />
-}
+  return <DatePicker placeholder="Pick a date" />;
+};
 
-export default Basic
+export default Basic;

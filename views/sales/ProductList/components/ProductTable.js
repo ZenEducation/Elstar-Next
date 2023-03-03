@@ -37,7 +37,7 @@ const ActionColumn = ({ row }) => {
   const navigate = useRouter();
 
   const onEdit = () => {
-    navigate.push(`/app/sales/product-edit/${row.id}`);
+    navigate.push(`/Apps/sales/product-edit/${row.id}`);
   };
 
   const onDelete = () => {

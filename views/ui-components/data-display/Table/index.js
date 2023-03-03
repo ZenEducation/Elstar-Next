@@ -62,7 +62,7 @@ const demos = [
     mdName: "PaginationTable",
     mdPath: mdPath,
     title: "Pagination",
-    desc: `Table can works with <a href="/ui-components/pagination" class="text-blue-500">Pagination</a> component.`,
+    desc: `Table can works with <a href="/ui-components/navigation/pagination" class="text-blue-500">Pagination</a> component.`,
     component: <PaginationTable />,
   },
   {

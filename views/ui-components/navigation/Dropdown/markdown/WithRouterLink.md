@@ -11,13 +11,13 @@ const WithRouterLink = () => {
                 <Dropdown.Item>
                     <Link
                         className="menu-item-link"
-                        href="/ui-components/checkbox"
+                        href="/ui-components/forms/checkbox"
                     >
                         Checkbox
                     </Link>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                    <Link className="menu-item-link" href="/ui-components/button">
+                    <Link className="menu-item-link" href="/ui-components/common/button">
                         Button
                     </Link>
                 </Dropdown.Item>
@@ -27,7 +27,7 @@ const WithRouterLink = () => {
                     </Link>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                    <Link className="menu-item-link" href="/ui-components/dialog">
+                    <Link className="menu-item-link" href="/ui-components/feedback/dialog">
                         Dialog
                     </Link>
                 </Dropdown.Item>

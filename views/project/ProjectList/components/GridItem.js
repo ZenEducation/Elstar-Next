@@ -14,7 +14,7 @@ const GridItem = ({ data }) => {
     <Card bodyClass="h-full">
       <div className="flex flex-col justify-between h-full">
         <div className="flex justify-between">
-          <Link href="/app/scrum-board">
+          <Link href="/Apps/scrum-board">
             <h6>{name}</h6>
           </Link>
           <ItemDropdown />

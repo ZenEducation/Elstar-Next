@@ -11,7 +11,7 @@ const CustomerInfo = ({ data }) => {
       <h5 className="mb-4">Customer</h5>
       <Link
         className="group flex items-center justify-between"
-        href="/app/crm/customer-details?id=11"
+        href="/Apps/crm/customer-details?id=11"
       >
         <div className="flex items-center">
           <Avatar shape="circle" src={data.img} />

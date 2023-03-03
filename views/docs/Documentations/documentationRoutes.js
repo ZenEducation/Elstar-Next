@@ -25,8 +25,7 @@ const documentationRoutes = [
       {
         path: "tailwindcss",
         label: "TailwindCSS",
-        component: dynamic(
-          async () => await import("./components/TailwindCss")
+        component: dynamic(async () => await import("./components/TailwindCss")
         ),
       },
       {

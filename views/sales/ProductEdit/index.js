@@ -37,7 +37,7 @@ const ProductEdit = () => {
   };
 
   const handleDiscard = () => {
-    navigate.push("/app/sales/product-list");
+    navigate.push("/Apps/sales/product-list");
   };
 
   const handleDelete = async (setDialogOpen) => {
@@ -61,7 +61,7 @@ const ProductEdit = () => {
         placement: "top-center",
       }
     );
-    navigate.push("/app/sales/product-list");
+    navigate.push("/Apps/sales/product-list");
   };
 
   useEffect(() => {

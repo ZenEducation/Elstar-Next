@@ -9,7 +9,31 @@ const NavContent = ({ onLinkClick, routes }) => {
 
   const activeClass = `${textTheme} hover:${textTheme} ${borderTheme}`;
 
-  return <></>;
+  return (
+    <>
+      {routes.map((group) => (
+        <div className="mb-6" key={group.groupName}>
+          <h6 className="mb-4">{group.groupName}</h6>
+          <div className="ltr:border-l rtl:border-r border-gray-200 dark:border-gray-600">
+            {group.nav.map((menu) => (
+              <Link
+                key={menu.label}
+                className={({ isActive }) =>
+                  `cursor-pointer font-semibold ltr:border-l rtl:border-r px-4 h-6 mb-4 flex items-center gap-2 hover:text-gray-900 dark:hover:text-gray-100 ltr:-ml-px rtl:-mr-px ${
+                    isActive ? activeClass : "border-transparent"
+                  }`
+                }
+                href={menu.path}
+                onClick={onLinkClick}
+              >
+                <span>{menu.label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
+    </>
+  );
 };
 
 const MobileNav = ({ routes }) => {

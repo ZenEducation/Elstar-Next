@@ -6,6 +6,7 @@ import DemoLayout from "components/docs/DemoLayout";
 import Basic from "./Basic";
 // import Affix from './Affix'
 import Custom from "./Custom";
+import dynamic from "next/dynamic";
 const Affix = dynamic(() => import("./Affix"), {
   ssr: false,
 });

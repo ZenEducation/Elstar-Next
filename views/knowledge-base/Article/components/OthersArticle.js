@@ -24,7 +24,7 @@ const ArticleItem = ({ data, isLastChild }) => {
   const navigate = useRouter();
 
   const onArticleClick = (id) => {
-    navigate.push(`/app/knowledge-base/article?id=${id}`);
+    navigate.push(`/Apps/knowledge-base/article?id=${id}`);
   };
 
   return (

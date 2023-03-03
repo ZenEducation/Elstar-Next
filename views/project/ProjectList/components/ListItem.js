@@ -18,7 +18,7 @@ const ListItem = ({ data, cardBorder }) => {
           <div className="my-1 sm:my-0 col-span-12 sm:col-span-2 md:col-span-3 lg:col-span-3 md:flex md:items-center">
             <div className="flex flex-col">
               <h6 className="font-bold">
-                <Link href="/app/project/scrum-board">{name}</Link>
+                <Link href="/Apps/project/scrum-board">{name}</Link>
               </h6>
               <span>{category}</span>
             </div>

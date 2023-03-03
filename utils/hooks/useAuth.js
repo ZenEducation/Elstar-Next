@@ -37,7 +37,7 @@ function useAuth() {
           );
         }
         const redirectUrl = query.get(REDIRECT_URL_KEY);
-        navigate.push("/app/sales/dashboard");
+        navigate.push("/Apps/sales/dashboard");
         return {
           status: "success",
           message: "",
@@ -70,7 +70,7 @@ function useAuth() {
           );
         }
         const redirectUrl = query.get(REDIRECT_URL_KEY);
-        navigate.push("/app/sales/dashboard");
+        navigate.push("/Apps/sales/dashboard");
         return {
           status: "success",
           message: "",

@@ -100,7 +100,7 @@ const Leads = ({ data = [], className }) => {
     useTable({ columns, data, initialState: { pageIndex: 0 } });
 
   const onNavigate = () => {
-    navigate.push("/app/crm/customers");
+    navigate.push("/Apps/crm/customers");
   };
 
   return (

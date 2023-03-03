@@ -2,20 +2,18 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const ClassicLayout = dynamic(() => import("components/layout/ClassicLayout"), {
-  ssr: false,
-});
-
 const Welcome = dynamic(() => import("views/pages/Welcome/index"), {
   ssr: false,
 });
 
+import useLayout from "utils/hooks/useLayout";
 const Index = () => {
+  const Layout = useLayout();
   return (
     <>
-      <ClassicLayout>
+      <Layout>
         <Welcome />
-      </ClassicLayout>
+      </Layout>
     </>
   );
 };

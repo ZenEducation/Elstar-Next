@@ -24,7 +24,7 @@ const validationSchema = Yup.object().shape({
 const SignInForm = (props) => {
   const router = useRouter();
   const handleSubmit = () => {
-    router.push("/app/sales/dashboard");
+    router.push("/Apps/sales/dashboard");
   };
   const {
     disableSubmit = false,

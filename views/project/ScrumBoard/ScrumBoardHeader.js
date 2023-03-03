@@ -48,7 +48,7 @@ const BoardHeader = () => {
             />
             <Button
               size="sm"
-              onClick={() => navigate.push("/app/account/settings/profile")}
+              onClick={() => navigate.push("/Apps/account/settings/profile")}
               icon={<HiOutlineCog />}
             />
             <BoardAddNewColumn />

@@ -23,6 +23,8 @@ function useDarkMode() {
   }, [isEnabled]);
 
   return [isEnabled, onModeChange];
+
+  return;
 }
 
 export default useDarkMode;

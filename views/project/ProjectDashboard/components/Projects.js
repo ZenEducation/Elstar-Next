@@ -8,7 +8,7 @@ const Projects = ({ data = [] }) => {
   const navigate = useRouter();
 
   const onViewAllProjects = () => {
-    navigate.push("/app/project/project-list");
+    navigate.push("/Apps/project/project-list");
   };
 
   return (

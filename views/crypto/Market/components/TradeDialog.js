@@ -53,7 +53,7 @@ const TradeDialog = () => {
   const handleDone = (redirect) => {
     onDialogClose();
     if (redirect) {
-      navigate.push("/app/crypto/wallets");
+      navigate.push("/Apps/crypto/wallets");
     }
   };
 

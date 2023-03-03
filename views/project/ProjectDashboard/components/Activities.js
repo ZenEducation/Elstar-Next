@@ -10,7 +10,7 @@ const Activities = ({ data = [] }) => {
   const navigate = useRouter();
 
   const onViewAllActivity = () => {
-    navigate.push("/app/account/activity-log");
+    navigate.push("/Apps/account/activity-log");
   };
 
   return (

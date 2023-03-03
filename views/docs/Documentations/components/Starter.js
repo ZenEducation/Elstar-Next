@@ -7,7 +7,7 @@ const RouteAndNav = () => {
     <>
       <p>
         As we mentioned in{" "}
-        <Link href="/docs/documentation/installation">Installation</Link>, we
+        <Link href="/guide/documentationinstallation">Installation</Link>, we
         have provided a starter version with minimum core components and
         functionality setup, we strongly recommend developer use this version to
         build the app on top.
@@ -21,7 +21,7 @@ const RouteAndNav = () => {
         Note: the starter version enabled mock api by default, every api calls
         will point to the mock server, if you wish to disable or know more about
         the mock api, visit{" "}
-        <Link href="/docs/documentation/mock-api">Mock API</Link> doc.
+        <Link href="/guide/documentationmock-api">Mock API</Link> doc.
       </i>
       <div className="mt-10" id="defaultConfig">
         <h5>Default configs</h5>
@@ -30,7 +30,7 @@ const RouteAndNav = () => {
           change the config according to your needs.
         </p>
         <p className="mb-2">
-          AppConfig - <Link href="/docs/documentation/app">Doc</Link>
+          AppConfig - <Link href="/guide/documentationapp">Doc</Link>
         </p>
         <SyntaxHighlighter language="js">{`const appConfig = {
     apiPrefix: '/api',
@@ -42,7 +42,7 @@ const RouteAndNav = () => {
 `}</SyntaxHighlighter>
         <p className="mb-2">
           ThemeConfig -{" "}
-          <Link href="/docs/documentation/overall=theme-config">Doc</Link>
+          <Link href="/guide/documentationoverall=theme-config">Doc</Link>
         </p>
         <SyntaxHighlighter language="js">{`export const themeConfig = {
     themeColor: 'indigo',
@@ -62,7 +62,7 @@ const RouteAndNav = () => {
 `}</SyntaxHighlighter>
         <p className="mb-2">
           RoutesConfig -{" "}
-          <NavLink href="/docs/documentation/routing">Doc</NavLink>
+          <NavLink href="/guide/documentationrouting">Doc</NavLink>
         </p>
         <SyntaxHighlighter language="js">{`const publicRoutes = [
     {
@@ -101,7 +101,7 @@ export const protectedRoutes = [
 ]
 `}</SyntaxHighlighter>
         <p className="mb-2">
-          NavConfig - <Link href="/docs/documentation/routing">Doc</Link>
+          NavConfig - <Link href="/guide/documentationrouting">Doc</Link>
         </p>
         <SyntaxHighlighter language="js">{`const navigationConfig = [
     {

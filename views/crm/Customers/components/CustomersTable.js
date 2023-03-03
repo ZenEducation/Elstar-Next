@@ -47,7 +47,7 @@ const NameColumn = ({ row }) => {
       <Avatar size={28} shape="circle" src={row.img} />
       <Link
         className={`hover:${textTheme} ml-2 rtl:mr-2 font-semibold`}
-        href={`/app/crm/customer-details?id=${row.id}`}
+        href={`/Apps/crm/customer-details?id=${row.id}`}
       >
         {row.name}
       </Link>

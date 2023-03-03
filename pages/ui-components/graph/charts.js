@@ -2,20 +2,18 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const ClassicLayout = dynamic(() => import("components/layout/ClassicLayout"), {
-  ssr: false,
-});
-
 const Charts = dynamic(() => import("views/ui-components/graph/Charts/index"), {
   ssr: false,
 });
 
+import useLayout from "utils/hooks/useLayout";
 const Index = () => {
+  const Layout = useLayout();
   return (
     <>
-      <ClassicLayout>
+      <Layout>
         <Charts />
-      </ClassicLayout>
+      </Layout>
     </>
   );
 };
