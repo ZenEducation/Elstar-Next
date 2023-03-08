@@ -1,11 +1,11 @@
 import React from "react";
-import ForgotPasswordForm from "views/auth/ForgotPassword/ForgotPasswordForm";
+import ResetPasswordForm from "components/auth/ResetPassword/ResetPasswordForm";
 import Simple from "components/layout/AuthLayout/Simple";
 
-const ForgotPasswordSimple = (props) => {
+const ResetPasswordSimple = (props) => {
   return (
     <Simple>
-      <ForgotPasswordForm
+      <ResetPasswordForm
         disableSubmit={true}
         signInUrl="/auth/SignIn/sign-in-simple"
         {...props}
@@ -14,4 +14,4 @@ const ForgotPasswordSimple = (props) => {
   );
 };
 
-export default ForgotPasswordSimple;
+export default ResetPasswordSimple;

@@ -1,5 +1,5 @@
 import React from "react";
-import SignUpForm from "views/auth/SignUp/SignUpForm";
+import SignUpForm from "components/auth/SignUp/SignUpForm";
 import Side from "components/layout/AuthLayout/Side";
 
 const SignUpSide = (props) => {

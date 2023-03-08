@@ -1,5 +1,5 @@
 import React from "react";
-import SignInForm from "views/auth/SignIn/SignInForm";
+import SignInForm from "components/auth/SignIn/SignInForm";
 import Cover from "components/layout/AuthLayout/Cover";
 
 const SignInCover = (props) => {

@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const SignIn = dynamic(() => import("views/auth-demo/SignIn/SignInSide"), {
+const SignIn = dynamic(() => import("components/auth-demo/SignIn/SignInSide"), {
   ssr: false,
 });
 

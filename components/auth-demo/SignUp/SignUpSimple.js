@@ -1,5 +1,5 @@
 import React from "react";
-import SignUpForm from "views/auth/SignUp/SignUpForm";
+import SignUpForm from "components/auth/SignUp/SignUpForm";
 import Simple from "components/layout/AuthLayout/Simple";
 
 const SignUpSimple = (props) => {

@@ -68,25 +68,25 @@ const RouteAndNav = () => {
     {
         key: 'signIn',
         path: '/sign-in',
-        component: dynamic(async() =>await import('views/auth/SignIn')),
+        component: dynamic(async() =>await import('components/auth/SignIn')),
         authority: [],
     },
     {
         key: 'signUp',
         path: '/sign-up',
-        component: dynamic(async() =>await import('views/auth/SignUp')),
+        component: dynamic(async() =>await import('components/auth/SignUp')),
         authority: [],
     },
     {
         key: 'forgotPassword',
         path: '/forgot-password',
-        component: dynamic(async() =>await import('views/auth/ForgotPassword')),
+        component: dynamic(async() =>await import('components/auth/ForgotPassword')),
         authority: [],
     },
     {
         key: 'resetPassword',
         path: '/reset-password',
-        component: dynamic(async() =>await import('views/auth/ResetPassword')),
+        component: dynamic(async() =>await import('components/auth/ResetPassword')),
         authority: [],
     }
 ]

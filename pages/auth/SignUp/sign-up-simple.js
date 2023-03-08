@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const SignUpSimple = dynamic(
-  () => import("views/auth-demo/SignUp/SignUpSimple"),
+  () => import("components/auth-demo/SignUp/SignUpSimple"),
   {
     ssr: false,
   }

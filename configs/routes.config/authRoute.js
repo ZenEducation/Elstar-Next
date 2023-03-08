@@ -4,7 +4,7 @@ const authRoute = [
   {
     key: "signIn",
     path: `/sign-in`,
-    component: dynamic(() => import("@/views/auth/SignIn/SignIn"), {
+    component: dynamic(() => import("@/components/auth/SignIn/SignIn"), {
       ssr: false,
     }),
     authority: [],
@@ -12,7 +12,7 @@ const authRoute = [
   {
     key: "signUp",
     path: `/sign-up`,
-    component: dynamic(() => import("views/auth/SignUp"), {
+    component: dynamic(() => import("components/auth/SignUp"), {
       ssr: false,
     }),
     authority: [],
@@ -20,7 +20,7 @@ const authRoute = [
   {
     key: "forgotPassword",
     path: `/forgot-password`,
-    component: dynamic(() => import("views/auth/ForgotPassword"), {
+    component: dynamic(() => import("components/auth/ForgotPassword"), {
       ssr: false,
     }),
     authority: [],
@@ -28,7 +28,7 @@ const authRoute = [
   {
     key: "resetPassword",
     path: `/reset-password`,
-    component: dynamic(() => import("views/auth/ResetPassword"), {
+    component: dynamic(() => import("components/auth/ResetPassword"), {
       ssr: false,
     }),
     authority: [],

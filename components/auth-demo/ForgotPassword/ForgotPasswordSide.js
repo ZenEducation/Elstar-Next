@@ -1,11 +1,11 @@
 import React from "react";
-import ResetPasswordForm from "views/auth/ResetPassword/ResetPasswordForm";
+import ForgotPasswordForm from "components/auth/ForgotPassword/ForgotPasswordForm";
 import Side from "components/layout/AuthLayout/Side";
 
-const ResetPasswordSide = (props) => {
+const ForgotPasswordCover = (props) => {
   return (
     <Side>
-      <ResetPasswordForm
+      <ForgotPasswordForm
         disableSubmit={true}
         signInUrl="/auth/sign-in-side"
         {...props}
@@ -14,4 +14,4 @@ const ResetPasswordSide = (props) => {
   );
 };
 
-export default ResetPasswordSide;
+export default ForgotPasswordCover;

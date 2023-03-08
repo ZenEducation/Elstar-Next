@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const ResetPassword = dynamic(
-  () => import("views/auth-demo/ResetPassword/ResetPasswordSimple"),
+  () => import("components/auth-demo/ResetPassword/ResetPasswordSimple"),
   {
     ssr: false,
   }

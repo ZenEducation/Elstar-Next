@@ -1,11 +1,11 @@
 import React from "react";
-import ForgotPasswordForm from "views/auth/ForgotPassword/ForgotPasswordForm";
+import ResetPasswordForm from "components/auth/ResetPassword/ResetPasswordForm";
 import Cover from "components/layout/AuthLayout/Cover";
 
-const ForgotPasswordCover = (props) => {
+const ResetPasswordCover = (props) => {
   return (
     <Cover>
-      <ForgotPasswordForm
+      <ResetPasswordForm
         disableSubmit={true}
         signInUrl="/auth/sign-in-cover"
         {...props}
@@ -14,4 +14,4 @@ const ForgotPasswordCover = (props) => {
   );
 };
 
-export default ForgotPasswordCover;
+export default ResetPasswordCover;

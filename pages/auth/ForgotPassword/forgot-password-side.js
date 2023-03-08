@@ -7,7 +7,7 @@ const ClassicLayout = dynamic(() => import("components/layout/ClassicLayout"), {
 });
 
 const ForgotPassword = dynamic(
-  () => import("views/auth-demo/ForgotPassword/ForgotPasswordSide"),
+  () => import("components/auth-demo/ForgotPassword/ForgotPasswordSide"),
   {
     ssr: false,
   }
