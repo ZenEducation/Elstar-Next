@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const Article = dynamic(() => import("views/knowledge-base/Article/index"), {
+const Article = dynamic(() => import("components/Apps/knowledge-base/Article/index"), {
   ssr: false,
 });
 

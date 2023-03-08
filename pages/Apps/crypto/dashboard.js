@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 
 const CryptoDashboard = dynamic(
-  () => import("views/crypto/CryptoDashboard/index"),
+  () => import("components/Apps/crypto/CryptoDashboard/index"),
   {
     ssr: false,
   }

@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 
 const EditArticle = dynamic(
-  () => import("views/knowledge-base/EditArticle/index"),
+  () => import("components/Apps/knowledge-base/EditArticle/index"),
   {
     ssr: false,
   }

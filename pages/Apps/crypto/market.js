@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-const Market = dynamic(() => import("views/crypto/Market/index"), {
+const Market = dynamic(() => import("components/Apps/crypto/Market/index"), {
   ssr: false,
 });
 

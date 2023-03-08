@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const Settings = dynamic(() => import("views/account/Settings/index"), {
+const Settings = dynamic(() => import("components/Apps/Accounts/Settings/index"), {
   ssr: false,
 });
 

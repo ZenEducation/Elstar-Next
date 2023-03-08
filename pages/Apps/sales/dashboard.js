@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
-const Sales = dynamic(() => import("views/sales/SalesDashboard/index"), {
+const Sales = dynamic(() => import("components/Apps/sales/SalesDashboard/index"), {
   ssr: false,
 });
 

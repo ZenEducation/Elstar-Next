@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const OrderList = dynamic(() => import("views/sales/OrderList/index"), {
+const OrderList = dynamic(() => import("components/Apps/sales/OrderList/index"), {
   ssr: false,
 });
 

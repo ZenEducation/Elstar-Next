@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const ProjectDashboard = dynamic(
-  () => import("views/project/ProjectDashboard/index"),
+  () => import("components/Apps/project/ProjectDashboard/index"),
   {
     ssr: false,
   }
