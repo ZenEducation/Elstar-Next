@@ -1,7 +1,7 @@
 import React from "react";
 
 import dynamic from "next/dynamic";
-const AccessDenied = dynamic(() => import("views/pages/AccessDenied/index"), {
+const AccessDenied = dynamic(() => import("components/pages/AccessDenied/index"), {
   ssr: false,
 });
 
