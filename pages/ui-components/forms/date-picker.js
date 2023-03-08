@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 const DatePicker = dynamic(
-  () => import("views/ui-components/forms/DatePicker/index"),
+  () => import("components/ui-components/forms/DatePicker/index"),
   {
     ssr: false,
   }

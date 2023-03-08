@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Spinner = dynamic(
-  () => import("views/ui-components/feedback/Spinner/index"),
+  () => import("components/ui-components/feedback/Spinner/index"),
   {
     ssr: false,
   }

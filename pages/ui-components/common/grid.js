@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Grid = dynamic(() => import("views/ui-components/common/Grid/index"), {
+const Grid = dynamic(() => import("components/ui-components/common/Grid/index"), {
   ssr: false,
 });
 

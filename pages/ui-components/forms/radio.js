@@ -1,7 +1,7 @@
 import React from "react";
 
 import dynamic from "next/dynamic";
-const Radio = dynamic(() => import("views/ui-components/forms/Radio/index"), {
+const Radio = dynamic(() => import("components/ui-components/forms/Radio/index"), {
   ssr: false,
 });
 

@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Menu = dynamic(
-  () => import("views/ui-components/navigation/Menu/index"),
+  () => import("components/ui-components/navigation/Menu/index"),
   {
     ssr: false,
   }

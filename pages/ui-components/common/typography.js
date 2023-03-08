@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 const TypoGraphy = dynamic(
-  () => import("views/ui-components/common/Typography/index"),
+  () => import("components/ui-components/common/Typography/index"),
   {
     ssr: false,
   }

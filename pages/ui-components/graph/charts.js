@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Charts = dynamic(() => import("views/ui-components/graph/Charts/index"), {
+const Charts = dynamic(() => import("components/ui-components/graph/Charts/index"), {
   ssr: false,
 });
 

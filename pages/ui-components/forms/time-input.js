@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 const TimeInput = dynamic(
-  () => import("views/ui-components/forms/TimeInput/index"),
+  () => import("components/ui-components/forms/TimeInput/index"),
   {
     ssr: false,
   }

@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Progress = dynamic(
-  () => import("views/ui-components/feedback/Progress/index"),
+  () => import("components/ui-components/feedback/Progress/index"),
   {
     ssr: false,
   }

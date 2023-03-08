@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Drawer = dynamic(
-  () => import("views/ui-components/feedback/Drawer/index"),
+  () => import("components/ui-components/feedback/Drawer/index"),
   {
     ssr: false,
   }

@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Cards = dynamic(
-  () => import("views/ui-components/data-display/Cards/index"),
+  () => import("components/ui-components/data-display/Cards/index"),
   {
     ssr: false,
   }

@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Skeleton = dynamic(
-  () => import("views/ui-components/feedback/Skeleton/index"),
+  () => import("components/ui-components/feedback/Skeleton/index"),
   {
     ssr: false,
   }

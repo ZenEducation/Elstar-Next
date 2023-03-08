@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Button = dynamic(
-  () => import("views/ui-components/common/Button/index"),
+  () => import("components/ui-components/common/Button/index"),
   {
     ssr: false,
   }

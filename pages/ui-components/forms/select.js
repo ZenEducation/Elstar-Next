@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Select = dynamic(() => import("views/ui-components/forms/Select/index"), {
+const Select = dynamic(() => import("components/ui-components/forms/Select/index"), {
   ssr: false,
 });
 

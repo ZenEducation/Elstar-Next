@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Alert = dynamic(
-  () => import("views/ui-components/feedback/Alert/index"),
+  () => import("components/ui-components/feedback/Alert/index"),
   {
     ssr: false,
   }
