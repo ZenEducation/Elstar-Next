@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-const Wallets = dynamic(() => import("views/crypto/Wallets/index"), {
+const Wallets = dynamic(() => import("components/Apps/crypto/Wallets/index"), {
   ssr: false,
 });
 

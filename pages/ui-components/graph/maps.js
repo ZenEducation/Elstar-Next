@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Maps = dynamic(() => import("views/ui-components/graph/Maps/index"), {
+const Maps = dynamic(() => import("components/ui-components/graph/Maps/index"), {
   ssr: false,
 });
 

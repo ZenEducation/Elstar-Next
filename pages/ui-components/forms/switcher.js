@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Switcher = dynamic(
-  () => import("views/ui-components/forms/Switcher/index"),
+  () => import("components/ui-components/forms/Switcher/index"),
   {
     ssr: false,
   }

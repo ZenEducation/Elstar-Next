@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 const Avatar = dynamic(
-  () => import("views/ui-components/data-display/Avatar/index"),
+  () => import("components/ui-components/data-display/Avatar/index"),
   {
     ssr: false,
   }

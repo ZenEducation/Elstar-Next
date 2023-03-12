@@ -1,7 +1,7 @@
 import React from "react";
 
 import dynamic from "next/dynamic";
-const Input = dynamic(() => import("views/ui-components/forms/Input/index"), {
+const Input = dynamic(() => import("components/ui-components/forms/Input/index"), {
   ssr: false,
 });
 

@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import React from "react";
-// import ShareComponentsDocView from "@/views/docs/SharedComponentsDoc/index";
+// import ShareComponentsDocView from "@/components/docs/SharedComponentsDoc/index";
 const SharedComponentsDoc = dynamic(
-  () => import("views/docs/SharedComponentsDoc/index"),
+  () => import("components/docs/SharedComponentsDoc/index"),
   {
     ssr: false,
   }

@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Segment = dynamic(
-  () => import("views/ui-components/forms/Segment/index"),
+  () => import("components/ui-components/forms/Segment/index"),
   {
     ssr: false,
   }

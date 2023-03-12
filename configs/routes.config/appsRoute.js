@@ -6,19 +6,19 @@ const appsRoute = [
   {
     key: "appsProject.dashboard",
     path: `${APP_PREFIX_PATH}/project/dashboard`,
-    component: dynamic(() => import("views/project/ProjectDashboard")),
+    component: dynamic(() => import("components/Apps/project/ProjectDashboard")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsProject.projectList",
     path: `${APP_PREFIX_PATH}/project/project-list`,
-    component: dynamic(() => import("views/project/ProjectList")),
+    component: dynamic(() => import("components/Apps/project/ProjectList")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsProject.scrumBoard",
     path: `${APP_PREFIX_PATH}/project/scrum-board`,
-    component: dynamic(() => import("views/project/ScrumBoard")),
+    component: dynamic(() => import("components/Apps/project/ScrumBoard")),
     authority: [ADMIN, USER],
     meta: {
       pageContainerType: "gutterless",
@@ -27,25 +27,25 @@ const appsRoute = [
   {
     key: "appsProject.issue",
     path: `${APP_PREFIX_PATH}/project/issue`,
-    component: dynamic(() => import("views/project/Issue")),
+    component: dynamic(() => import("components/Apps/project/Issue")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsCrm.dashboard",
     path: `${APP_PREFIX_PATH}/crm/dashboard`,
-    component: dynamic(() => import("views/crm/CrmDashboard")),
+    component: dynamic(() => import("components/Apps/crm/CrmDashboard")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsCrm.calendar",
     path: `${APP_PREFIX_PATH}/crm/calendar`,
-    component: dynamic(() => import("views/crm/Calendar")),
+    component: dynamic(() => import("components/Apps/crm/Calendar")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsCrm.customers",
     path: `${APP_PREFIX_PATH}/crm/customers`,
-    component: dynamic(() => import("views/crm/Customers")),
+    component: dynamic(() => import("components/Apps/crm/Customers")),
     authority: [ADMIN, USER],
     meta: {
       header: "Customers",
@@ -54,7 +54,7 @@ const appsRoute = [
   {
     key: "appsCrm.customerDetails",
     path: `${APP_PREFIX_PATH}/crm/customer-details`,
-    component: dynamic(() => import("views/crm/CustomerDetail")),
+    component: dynamic(() => import("components/Apps/crm/CustomerDetail")),
     authority: [ADMIN, USER],
     meta: {
       header: "Customer Details",
@@ -64,7 +64,7 @@ const appsRoute = [
   {
     key: "appsCrm.mail",
     path: `${APP_PREFIX_PATH}/crm/mail`,
-    component: dynamic(() => import("views/crm/Mail")),
+    component: dynamic(() => import("components/Apps/crm/Mail")),
     authority: [ADMIN, USER],
     meta: {
       pageContainerType: "gutterless",
@@ -74,7 +74,7 @@ const appsRoute = [
   {
     key: "appsCrm.mail",
     path: `${APP_PREFIX_PATH}/crm/mail/:category`,
-    component: dynamic(() => import("views/crm/Mail")),
+    component: dynamic(() => import("components/Apps/crm/Mail")),
     authority: [ADMIN, USER],
     meta: {
       pageContainerType: "gutterless",
@@ -84,19 +84,19 @@ const appsRoute = [
   {
     key: "appsSales.dashboard",
     path: `${APP_PREFIX_PATH}/sales/dashboard`,
-    component: dynamic(() => import("views/sales/SalesDashboard")),
+    component: dynamic(() => import("components/Apps/sales/SalesDashboard")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsSales.productList",
     path: `${APP_PREFIX_PATH}/sales/product-list`,
-    component: dynamic(() => import("views/sales/ProductList")),
+    component: dynamic(() => import("components/Apps/sales/ProductList")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsSales.productEdit",
     path: `${APP_PREFIX_PATH}/sales/product-edit/:productId`,
-    component: dynamic(() => import("views/sales/ProductEdit")),
+    component: dynamic(() => import("components/Apps/sales/ProductEdit")),
     authority: [ADMIN, USER],
     meta: {
       header: "Edit Product",
@@ -105,7 +105,7 @@ const appsRoute = [
   {
     key: "appsSales.productNew",
     path: `${APP_PREFIX_PATH}/sales/product-new`,
-    component: dynamic(() => import("views/sales/ProductNew")),
+    component: dynamic(() => import("components/Apps/sales/ProductNew")),
     authority: [ADMIN, USER],
     meta: {
       header: "Add New Product",
@@ -114,25 +114,25 @@ const appsRoute = [
   {
     key: "appsSales.orderList",
     path: `${APP_PREFIX_PATH}/sales/order-list`,
-    component: dynamic(() => import("views/sales/OrderList")),
+    component: dynamic(() => import("components/Apps/sales/OrderList")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsSales.orderDetails",
     path: `${APP_PREFIX_PATH}/sales/order-details/:orderId`,
-    component: dynamic(() => import("views/sales/OrderDetails")),
+    component: dynamic(() => import("components/Apps/sales/OrderDetails")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsCrypto.dashboard",
     path: `${APP_PREFIX_PATH}/crypto/dashboard`,
-    component: dynamic(() => import("views/crypto/CryptoDashboard")),
+    component: dynamic(() => import("components/Apps/crypto/CryptoDashboard")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsCrypto.portfolio",
     path: `${APP_PREFIX_PATH}/crypto/portfolio`,
-    component: dynamic(() => import("views/crypto/Portfolio")),
+    component: dynamic(() => import("components/Apps/crypto/Portfolio")),
     authority: [ADMIN, USER],
     meta: {
       header: "Portfolio",
@@ -141,7 +141,7 @@ const appsRoute = [
   {
     key: "appsCrypto.market",
     path: `${APP_PREFIX_PATH}/crypto/market`,
-    component: dynamic(() => import("views/crypto/Market")),
+    component: dynamic(() => import("components/Apps/crypto/Market")),
     authority: [ADMIN, USER],
     meta: {
       header: "Market",
@@ -150,7 +150,7 @@ const appsRoute = [
   {
     key: "appsCrypto.wallets",
     path: `${APP_PREFIX_PATH}/crypto/wallets`,
-    component: dynamic(() => import("views/crypto/Wallets")),
+    component: dynamic(() => import("components/Apps/crypto/Wallets")),
     authority: [ADMIN, USER],
     meta: {
       header: "Wallets",
@@ -159,7 +159,7 @@ const appsRoute = [
   {
     key: "appsknowledgeBase.helpCenter",
     path: `${APP_PREFIX_PATH}/knowledge-base/help-center`,
-    component: dynamic(() => import("views/knowledge-base/HelpCenter")),
+    component: dynamic(() => import("components/Apps/knowledge-base/HelpCenter/index")),
     authority: [ADMIN, USER],
     meta: {
       pageContainerType: "gutterless",
@@ -168,32 +168,32 @@ const appsRoute = [
   {
     key: "appsknowledgeBase.article",
     path: `${APP_PREFIX_PATH}/knowledge-base/article`,
-    component: dynamic(() => import("views/knowledge-base/Article")),
+    component: dynamic(() => import("components/Apps/knowledge-base/Article/index")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsknowledgeBase.manageArticles",
     path: `${APP_PREFIX_PATH}/knowledge-base/manage-articles`,
-    component: dynamic(() => import("views/knowledge-base/ManageArticles")),
+    component: dynamic(() => import("components/Apps/knowledge-base/ManageArticles/index")),
     authority: [ADMIN, USER],
-    meta: {
-      header: "Manage Articles",
-      extraHeader: dynamic(() =>
-        import("views/knowledge-base/ManageArticles/components/PanelHeader")
-      ),
-      headerContainer: true,
-    },
+    // meta: {
+    //   header: "Manage Articles",
+    //   extraHeader: dynamic(() =>
+    //     import("components/Apps/knowledge-base/manage-articles")
+    //   ),
+    //   headerContainer: true,
+    // },
   },
   {
     key: "appsknowledgeBase.editArticle",
     path: `${APP_PREFIX_PATH}/knowledge-base/edit-article`,
-    component: dynamic(() => import("views/knowledge-base/EditArticle")),
+    component: dynamic(() => import("components/Apps/knowledge-base/EditArticle/index")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsAccount.settings",
     path: `${APP_PREFIX_PATH}/account/settings/:tab`,
-    component: dynamic(() => import("views/account/Settings")),
+    component: dynamic(() => import("components/Apps/Accounts/Settings")),
     authority: [ADMIN, USER],
     meta: {
       header: "Settings",
@@ -203,19 +203,19 @@ const appsRoute = [
   {
     key: "appsAccount.invoice",
     path: `${APP_PREFIX_PATH}/account/invoice/:id`,
-    component: dynamic(() => import("views/account/Invoice")),
+    component: dynamic(() => import("components/Apps/Accounts/Invoice")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsAccount.activityLog",
     path: `${APP_PREFIX_PATH}/account/activity-log`,
-    component: dynamic(() => import("views/account/ActivityLog")),
+    component: dynamic(() => import("components/Apps/Accounts/ActivityLog")),
     authority: [ADMIN, USER],
   },
   {
     key: "appsAccount.kycForm",
     path: `${APP_PREFIX_PATH}/account/kyc-form`,
-    component: dynamic(() => import("views/account/KycForm")),
+    component: dynamic(() => import("components/Apps/Accounts/KycForm")),
     authority: [ADMIN, USER],
   },
 ];

@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-const Invoice = dynamic(() => import("views/account/Invoice/index"), {
+const Invoice = dynamic(() => import("components/Apps/Accounts/Invoice/index"), {
   ssr: false,
 });
 

@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-const Calendar = dynamic(() => import("views/crm/Calendar/index"), {
+const Calendar = dynamic(() => import("components/Apps/crm/Calendar/index"), {
   ssr: false,
 });
 

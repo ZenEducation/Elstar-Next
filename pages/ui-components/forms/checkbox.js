@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Checkbox = dynamic(
-  () => import("views/ui-components/forms/Checkbox/index"),
+  () => import("components/ui-components/forms/Checkbox/index"),
   {
     ssr: false,
   }

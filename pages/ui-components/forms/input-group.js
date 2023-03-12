@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const InputGroup = dynamic(
-  () => import("views/ui-components/forms/InputGroup/index"),
+  () => import("components/ui-components/forms/InputGroup/index"),
   {
     ssr: false,
   }

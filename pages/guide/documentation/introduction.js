@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 
 const Documentations = dynamic(
-  () => import("views/docs/Documentations/index"),
+  () => import("components/docs/Documentations/index"),
   {
     ssr: false,
   }

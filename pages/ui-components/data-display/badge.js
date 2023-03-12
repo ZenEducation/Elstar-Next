@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Badge = dynamic(
-  () => import("views/ui-components/data-display/Badge/index"),
+  () => import("components/ui-components/data-display/Badge/index"),
   {
     ssr: false,
   }

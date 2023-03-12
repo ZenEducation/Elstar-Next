@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-const Portfolio = dynamic(() => import("views/crypto/Portfolio/index"), {
+const Portfolio = dynamic(() => import("components/Apps/crypto/Portfolio/index"), {
   ssr: false,
 });
 

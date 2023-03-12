@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Icons = dynamic(() => import("views/ui-components/common/Icons/index"), {
+const Icons = dynamic(() => import("components/ui-components/common/Icons/index"), {
   ssr: false,
 });
 

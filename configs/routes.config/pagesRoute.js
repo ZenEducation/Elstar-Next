@@ -6,13 +6,13 @@ const pagesRoute = [
   {
     key: "pages.welcome",
     path: `${PAGES_PREFIX_PATH}/welcome`,
-    component: dynamic(() => import("views/pages/Welcome")),
+    component: dynamic(() => import("components/pages/Welcome")),
     authority: [ADMIN, USER],
   },
   {
     key: "pages.accessDenied",
     path: "/pages/access-denied",
-    component: dynamic(() => import("views/pages/AccessDenied")),
+    component: dynamic(() => import("components/pages/AccessDenied")),
     authority: [ADMIN, USER],
   },
 ];

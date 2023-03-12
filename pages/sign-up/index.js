@@ -1,7 +1,7 @@
 import React from "react";
-// import SignInForm from "@/views/auth/SignIn/SignInForm";
+// import SignInForm from "@/components/auth/SignIn/SignInForm";
 import dynamic from "next/dynamic";
-import SignUp from "@/views/auth/SignUp/index";
+import SignUp from "@/components/auth/SignUp/index";
 const Side = dynamic(() => import("../../components/layout/AuthLayout/Side"), {
   ssr: false,
 });

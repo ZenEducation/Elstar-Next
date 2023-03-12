@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 const HelpCenter = dynamic(
-  () => import("views/knowledge-base/HelpCenter/index"),
+  () => import("components/Apps/knowledge-base/HelpCenter/index"),
   {
     ssr: false,
   }

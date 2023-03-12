@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const FormControl = dynamic(
-  () => import("views/ui-components/forms/FormControl/index"),
+  () => import("components/ui-components/forms/FormControl/index"),
   {
     ssr: false,
   }

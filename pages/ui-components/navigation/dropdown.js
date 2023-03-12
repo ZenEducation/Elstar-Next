@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Dropdown = dynamic(
-  () => import("views/ui-components/navigation/Dropdown/index"),
+  () => import("components/ui-components/navigation/Dropdown/index"),
   {
     ssr: false,
   }

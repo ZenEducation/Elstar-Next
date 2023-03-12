@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Welcome = dynamic(() => import("views/pages/Welcome/index"), {
+const Welcome = dynamic(() => import("components/pages/Welcome/index"), {
   ssr: false,
 });
 

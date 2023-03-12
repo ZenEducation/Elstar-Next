@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Tabs = dynamic(
-  () => import("views/ui-components/navigation/Tabs/index"),
+  () => import("components/ui-components/navigation/Tabs/index"),
   {
     ssr: false,
   }

@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 const Tooltip = dynamic(
-  () => import("views/ui-components/data-display/Tooltip/index"),
+  () => import("components/ui-components/data-display/Tooltip/index"),
   {
     ssr: false,
   }

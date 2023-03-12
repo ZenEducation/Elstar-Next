@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 const Steps = dynamic(
-  () => import("views/ui-components/navigation/Steps/index"),
+  () => import("components/ui-components/navigation/Steps/index"),
   {
     ssr: false,
   }

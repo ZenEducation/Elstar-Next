@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const Dialog = dynamic(
-  () => import("views/ui-components/feedback/Dialog/index"),
+  () => import("components/ui-components/feedback/Dialog/index"),
   {
     ssr: false,
   }
