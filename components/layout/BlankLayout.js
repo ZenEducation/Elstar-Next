@@ -1,5 +1,4 @@
 import React from "react";
-import View from "views";
 
 import dynamic from "next/dynamic";
 // const View = dynamic(() => import("views"), {

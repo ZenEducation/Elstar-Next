@@ -444,7 +444,6 @@ import Side from './Side'
 // import Cover from './Cover'
 import Cover from './Cover'
 // import Simple from './Simple'
-import View from 'views'
 import { useSelector } from 'react-redux'
 import { LAYOUT_TYPE_BLANK } from 'constants/theme.constant'
 
