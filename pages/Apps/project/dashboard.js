@@ -1,5 +1,4 @@
 import React from "react";
-// import ProjectDashboard from "@/views/project/ProjectDashboard/index";
 import dynamic from "next/dynamic";
 
 const ProjectDashboard = dynamic(
